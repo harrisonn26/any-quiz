@@ -11,8 +11,6 @@
 		Loading
 	} from 'carbon-components-svelte';
 
-	import { navigating } from '$app/stores';
-
 	let validState = {
 		quizName: true,
 		numQuestions: true,
@@ -54,7 +52,6 @@
 </script>
 
 <div class="container">
-	<h1 class="title">Any Quiz</h1>
 	<Form on:submit={submit}>
 		<TextInput
 			on:keydown={(event) => {
@@ -104,15 +101,11 @@
 
 <style>
 	.container {
-		position: absolute;
+		margin-top: 32px;
 		width: 100%;
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-		margin: 16px;
-	}
-	.title {
-		margin: 16px;
 	}
 	.spacer {
 		height: 16px;
